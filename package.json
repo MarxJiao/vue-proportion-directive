@@ -1,0 +1,23 @@
+{
+  "name": "vue-proportion-directive",
+  "version": "1.0.0",
+  "description": "vue 固定元素比例指令",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarxJiao/vue-proportion-directive.git"
+  },
+  "keywords": [
+    "vue",
+    "directive"
+  ],
+  "author": "Marx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarxJiao/vue-proportion-directive/issues"
+  },
+  "homepage": "https://github.com/MarxJiao/vue-proportion-directive#readme"
+}
