@@ -8,29 +8,18 @@
 const proportion = {
     install(Vue, options) {
         Vue.directive('proportion', {
-            bind(el, binding, vnode, oldVnode) {
+            inserted(el, binding, vnode, oldVnode) {
 
                 let w = el.offsetWidth;
-
-                let type = binding.value ? [].toString.call(binding.value) : undefined;
-
-                let proportion  = vtype === '[object Object]' ? +binding.value : +options;
-
-                let h = w * proportion;
-
+                let h = w * binding.value;
+                console.log(h)
                 el.style.height = h + 'px';
-                
+
             },
-            update(el, binding, vnode, oldVnode) {
-
+            componentUpdated(el, binding, vnode, oldVnode) {
                 let w = el.offsetWidth;
-
-                let type = binding.value ? [].toString.call(binding.value) : undefined;
-
-                let proportion  = vtype === '[object Object]' ? +binding.value : +options;
-
-                let h = w * proportion;
-
+                let h = w * binding.value;
+                console.log(h)
                 el.style.height = h + 'px';
             },
             unbind(el, binding, vnode, oldVnode) {
@@ -39,4 +28,4 @@ const proportion = {
     }
 }
 
-export default proportion;
+module.exports =  proportion;
