@@ -1,6 +1,6 @@
 {
   "name": "vue-proportion-directive",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "vue 固定元素比例指令",
   "main": "src/index.js",
   "scripts": {
