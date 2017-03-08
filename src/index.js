@@ -5,27 +5,25 @@
  */
 
 
-const proportion = {
-    install(Vue, options) {
+var proportion = {
+    install: function (Vue, options) {
         Vue.directive('proportion', {
-            inserted(el, binding, vnode, oldVnode) {
+            inserted: function (el, binding, vnode, oldVnode) {
 
                 let w = el.offsetWidth;
                 let h = w * binding.value;
-                console.log(h)
                 el.style.height = h + 'px';
 
             },
-            componentUpdated(el, binding, vnode, oldVnode) {
+            componentUpdated: function (el, binding, vnode, oldVnode) {
                 let w = el.offsetWidth;
                 let h = w * binding.value;
-                console.log(h)
                 el.style.height = h + 'px';
             },
-            unbind(el, binding, vnode, oldVnode) {
+            unbind: function (el, binding, vnode, oldVnode) {
             }
-        })
+        });
     }
-}
+};
 
 module.exports =  proportion;
