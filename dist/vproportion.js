@@ -1,0 +1,1 @@
+var proportion={install:function(t,o){t.directive("proportion",{inserted:function(t,o,n,e){var i=t.offsetWidth,r=i*o.value;t.style.height=r+"px"},componentUpdated:function(t,o,n,e){var i=t.offsetWidth,r=i*o.value;t.style.height=r+"px"},unbind:function(t,o,n,e){}})}};module.exports=proportion;

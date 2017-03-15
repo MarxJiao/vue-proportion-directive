@@ -2,9 +2,10 @@
   "name": "vue-proportion-directive",
   "version": "1.0.6",
   "description": "vue 固定元素比例指令",
-  "main": "src/index.js",
+  "main": "dist/vproportion.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "build": "uglifyjs ./src/index.js -c -m > ./dist/vproportion.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-webpack": "^1.8.1",
+    "uglify-js": "^2.8.12",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
     "webpack": "^1.14.0",

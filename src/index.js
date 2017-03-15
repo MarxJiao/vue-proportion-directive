@@ -10,14 +10,14 @@ var proportion = {
         Vue.directive('proportion', {
             inserted: function (el, binding, vnode, oldVnode) {
 
-                let w = el.offsetWidth;
-                let h = w * binding.value;
+                var w = el.offsetWidth;
+                var h = w * binding.value;
                 el.style.height = h + 'px';
 
             },
             componentUpdated: function (el, binding, vnode, oldVnode) {
-                let w = el.offsetWidth;
-                let h = w * binding.value;
+                var w = el.offsetWidth;
+                var h = w * binding.value;
                 el.style.height = h + 'px';
             },
             unbind: function (el, binding, vnode, oldVnode) {
