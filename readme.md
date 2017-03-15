@@ -1,5 +1,6 @@
 # vue比例指令
 [![Build Status](https://travis-ci.org/MarxJiao/vue-proportion-directive.svg?branch=master)](https://travis-ci.org/MarxJiao/vue-proportion-directive)
+
 根据元素宽度，按比例设置元素高度
 
 # USE
