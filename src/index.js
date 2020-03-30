@@ -5,7 +5,7 @@
  */
 
 var proportion = {
-    install(Vue) {
+    install: function (Vue) {
         function update (el, binding) {
             var w = el.offsetWidth;
             var h = w * binding.value;
@@ -13,7 +13,7 @@ var proportion = {
         }
 
         Vue.directive('proportion', {
-            inserted (el, binding) {
+            inserted: function (el, binding) {
                 var w = el.offsetWidth;
                 var h = w * binding.value;
                 el.style.height = h + 'px';
@@ -21,14 +21,14 @@ var proportion = {
                 window.addEventListener('resize', el.__resize);
             },
 
-            componentUpdated (el, binding) {
+            componentUpdated: function (el, binding) {
                 update(el, binding);
             },
 
-            unbind (el) {
+            unbind: function (el) {
                 window.removeEventListener('resize', el.__resize);
             }
-        })
+        });
     }
 };
 
