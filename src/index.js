@@ -4,23 +4,29 @@
  * @date 2016/02/20
  */
 
-
 var proportion = {
-    install: function (Vue, options) {
+    install: function (Vue) {
+        function update (el, binding) {
+            var w = el.offsetWidth;
+            var h = w * binding.value;
+            el.style.height = h + 'px';
+        }
+
         Vue.directive('proportion', {
-            inserted: function (el, binding, vnode, oldVnode) {
-
+            inserted: function (el, binding) {
                 var w = el.offsetWidth;
                 var h = w * binding.value;
                 el.style.height = h + 'px';
+                el.__resize = function () { update(el, binding); }
+                window.addEventListener('resize', el.__resize);
+            },
 
+            componentUpdated: function (el, binding) {
+                update(el, binding);
             },
-            componentUpdated: function (el, binding, vnode, oldVnode) {
-                var w = el.offsetWidth;
-                var h = w * binding.value;
-                el.style.height = h + 'px';
-            },
-            unbind: function (el, binding, vnode, oldVnode) {
+
+            unbind: function (el) {
+                window.removeEventListener('resize', el.__resize);
             }
         });
     }
