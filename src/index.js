@@ -32,4 +32,4 @@ var proportion = {
     }
 };
 
-module.exports =  proportion;
+module.exports = proportion;

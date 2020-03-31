@@ -23,7 +23,7 @@ describe('vue proportion directive test', () => {
 
         const el = vm.$el;
         const testelement = el.getElementsByTagName('div')[0];
-        expect(testelement.offsetWidth).toEqual(100);
+        expect(testelement.offsetHeight).toEqual(100);
     })
 });
     
